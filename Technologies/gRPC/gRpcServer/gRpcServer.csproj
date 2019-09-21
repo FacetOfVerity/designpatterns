@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Grpc.AspNetCore" Version="0.2.23-pre2" />
+        <Protobuf Include="..\Protos\count.proto" GrpcServices="Server" Link="Protos\count.proto" />
+    </ItemGroup>
+
+</Project>

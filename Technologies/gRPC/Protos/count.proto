@@ -1,0 +1,17 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+
+option csharp_namespace = "gRpcCountExample";
+
+package CountExample;
+
+// The counter service definition.
+service Counter {
+  // Возвращает количество вызовов метода
+  rpc GetCount (google.protobuf.Empty) returns (CountReply);
+}
+
+// Модель ответа
+message CountReply {
+  int32 count = 1;
+}
