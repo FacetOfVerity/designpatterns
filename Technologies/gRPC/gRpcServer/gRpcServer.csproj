@@ -5,8 +5,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Grpc.AspNetCore" Version="0.2.23-pre2" />
+        <PackageReference Include="Grpc.AspNetCore" Version="2.23.2" />
         <Protobuf Include="..\Protos\count.proto" GrpcServices="Server" Link="Protos\count.proto" />
+        <Protobuf Include="..\Protos\file-loader.proto" GrpcServices="Server" Link="Protos\file-loader.proto" />
     </ItemGroup>
 
 </Project>

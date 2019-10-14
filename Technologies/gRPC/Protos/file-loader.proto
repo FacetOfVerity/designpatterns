@@ -1,0 +1,17 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+
+option csharp_namespace = "gRpcFileLoadingExample";
+
+package FileLoadingExample;
+
+//Загрузчик файлов
+service Loader {
+    // Загрузка изображения
+    rpc GetImage (google.protobuf.Empty) returns (ImageModel);
+}
+
+//Модель изображения
+message ImageModel {
+    bytes Data = 1;
+}

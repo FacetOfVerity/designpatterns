@@ -7,9 +7,10 @@
 
     <ItemGroup>
         <Protobuf Include="..\Protos\count.proto" GrpcServices="Client" Link="Protos\count.proto" />
+        <Protobuf Include="..\Protos\file-loader.proto" GrpcServices="Server" Link="Protos\file-loader.proto" />
 
         <PackageReference Include="Google.Protobuf" Version="3.10.0-rc1" />
-        <PackageReference Include="Grpc.Net.Client" Version="0.2.23-pre2" />
+        <PackageReference Include="Grpc.Net.Client" Version="2.23.2" />
         <PackageReference Include="Grpc.Tools" PrivateAssets="All" Version="2.24.0-pre1" />
     </ItemGroup>
 
