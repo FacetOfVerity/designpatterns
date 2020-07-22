@@ -2,16 +2,21 @@
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
-        <TargetFramework>netcoreapp3.0</TargetFramework>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
     </PropertyGroup>
 
     <ItemGroup>
         <Protobuf Include="..\Protos\count.proto" GrpcServices="Client" Link="Protos\count.proto" />
         <Protobuf Include="..\Protos\file-loader.proto" GrpcServices="Client" Link="Protos\file-loader.proto" />
+    </ItemGroup>
 
-        <PackageReference Include="Google.Protobuf" Version="3.10.0-rc1" />
-        <PackageReference Include="Grpc.Net.Client" Version="2.23.2" />
-        <PackageReference Include="Grpc.Tools" PrivateAssets="All" Version="2.24.0-pre1" />
+    <ItemGroup>
+        <PackageReference Include="Google.Protobuf" Version="3.11.4"/>
+        <PackageReference Include="Grpc.Net.ClientFactory" Version="2.27.0"/>
+        <PackageReference Include="Grpc.Tools" Version="2.30.0">
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
     </ItemGroup>
 
 </Project>
