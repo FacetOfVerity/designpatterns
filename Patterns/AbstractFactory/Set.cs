@@ -13,11 +13,20 @@ namespace AbstractFactory
 
         public ISofa Sofa { get; set; }
 
-        public Set(IChair chair, ICoffeTable coffeTable, ISofa sofa)
+        public static Set CreateSetWithChairAndCoffeTable(IChair chair, ICoffeTable coffeTable)
+        {
+            return new Set(chair, coffeTable);
+        }
+
+        public Set(IChair chair, ICoffeTable coffeTable, ISofa sofa) : this(chair, coffeTable)
+        {
+            Sofa = sofa;
+        }
+
+        private Set(IChair chair, ICoffeTable coffeTable)
         {
             Chair = chair;
             CoffeTable = coffeTable;
-            Sofa = sofa;
         }
 
         public override string ToString()

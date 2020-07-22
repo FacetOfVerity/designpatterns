@@ -21,6 +21,10 @@ namespace AbstractFactory
             var modernSet = new Set(modernChair, modernCoffeTable, modernSofa);
             Console.WriteLine(modernSet);
 
+//            var set = Set
+//                .CreateSetWithChairAndCoffeTable(victorianChair, victorianCoffeTable)
+//                .ToString();
+
             Console.ReadKey();
         }
     }
