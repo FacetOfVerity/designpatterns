@@ -1,0 +1,47 @@
+version: '3.8'
+
+volumes:
+  redis-data:
+    driver: local
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - 15672:15672
+      - 5672:5672
+
+  random-events-service:
+    build:
+      context: .
+      dockerfile: ./BusExample.RandomEventsService.App/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - Messaging__Host=rabbitmq
+    restart: always
+    depends_on:
+      - rabbitmq
+        
+  events-logging-service:
+    build:
+      context: .
+      dockerfile: ./BusExample.EventsLoggingService.App/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - Messaging__Host=rabbitmq
+    restart: always
+    depends_on:
+      - rabbitmq
+      - random-events-service
+
+  events-processing-service:
+    build:
+      context: .
+      dockerfile: ./BusExample.EventsProcessingService.App/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - Messaging__Host=rabbitmq
+    restart: always
+    depends_on:
+      - rabbitmq
+      - random-events-service

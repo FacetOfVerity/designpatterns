@@ -12,6 +12,27 @@ EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gRpcServer", "gRPC\gRpcServer\gRpcServer.csproj", "{31860E24-8CC0-4F39-9FEB-954CE2F8C8CB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MassTransit", "MassTransit", "{4CC77BC0-B049-47A0-B0A6-DB9BD755AD37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusExample.RandomEventsService.App", "MassTransit\BusExample.RandomEventsService.App\BusExample.RandomEventsService.App.csproj", "{7DA4DC71-9809-4A6A-9A83-5ABEE568A3B4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{AECE5F5C-5C02-4A2A-A658-4FE631C09A3B}"
+	ProjectSection(SolutionItems) = preProject
+		MassTransit\docker-compose.yml = MassTransit\docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusExample.EventsLoggingService.App", "MassTransit\BusExample.EventsLoggingService.App\BusExample.EventsLoggingService.App.csproj", "{FC1BEE92-AA65-4151-8ABF-A27E9A4751F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusExample.EventsProcessingService.App", "MassTransit\BusExample.EventsProcessingService.App\BusExample.EventsProcessingService.App.csproj", "{FF5384C6-DD92-4B36-BF87-56345F28C79E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SeedWork", "SeedWork", "{B0A13B5F-F338-4A39-8F12-D59F878E5D2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeedWork.Infrastructure", "MassTransit\SeedWork\SeedWork.Infrastructure\SeedWork.Infrastructure.csproj", "{F9DC0268-7315-480B-A089-DA34E713F2E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusExample.RandomEvents.Contracts", "MassTransit\BusExample.RandomEvents.Contracts\BusExample.RandomEvents.Contracts.csproj", "{C9FF3827-7758-430E-8FA9-AF6E1A07F564}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusExample.EventsProcessingService.Contracts", "MassTransit\BusExample.EventsProcessingService.Contracts\BusExample.EventsProcessingService.Contracts.csproj", "{23A5CDBF-7F3E-4CD3-93AE-FEB6B3ADB93A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +42,14 @@ Global
 		{4BF7EB3F-BFE6-4BD3-AE35-AD1E40C3FC53} = {686C8302-6DDF-4B56-8F3A-5A7EFCFAFD3D}
 		{024CBD76-8C71-4008-AEFF-D6FFCAFDF647} = {686C8302-6DDF-4B56-8F3A-5A7EFCFAFD3D}
 		{31860E24-8CC0-4F39-9FEB-954CE2F8C8CB} = {686C8302-6DDF-4B56-8F3A-5A7EFCFAFD3D}
+		{7DA4DC71-9809-4A6A-9A83-5ABEE568A3B4} = {4CC77BC0-B049-47A0-B0A6-DB9BD755AD37}
+		{AECE5F5C-5C02-4A2A-A658-4FE631C09A3B} = {4CC77BC0-B049-47A0-B0A6-DB9BD755AD37}
+		{FC1BEE92-AA65-4151-8ABF-A27E9A4751F0} = {4CC77BC0-B049-47A0-B0A6-DB9BD755AD37}
+		{FF5384C6-DD92-4B36-BF87-56345F28C79E} = {4CC77BC0-B049-47A0-B0A6-DB9BD755AD37}
+		{B0A13B5F-F338-4A39-8F12-D59F878E5D2A} = {4CC77BC0-B049-47A0-B0A6-DB9BD755AD37}
+		{F9DC0268-7315-480B-A089-DA34E713F2E5} = {B0A13B5F-F338-4A39-8F12-D59F878E5D2A}
+		{C9FF3827-7758-430E-8FA9-AF6E1A07F564} = {4CC77BC0-B049-47A0-B0A6-DB9BD755AD37}
+		{23A5CDBF-7F3E-4CD3-93AE-FEB6B3ADB93A} = {4CC77BC0-B049-47A0-B0A6-DB9BD755AD37}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{4BF7EB3F-BFE6-4BD3-AE35-AD1E40C3FC53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -31,5 +60,29 @@ Global
 		{31860E24-8CC0-4F39-9FEB-954CE2F8C8CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31860E24-8CC0-4F39-9FEB-954CE2F8C8CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31860E24-8CC0-4F39-9FEB-954CE2F8C8CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DA4DC71-9809-4A6A-9A83-5ABEE568A3B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DA4DC71-9809-4A6A-9A83-5ABEE568A3B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DA4DC71-9809-4A6A-9A83-5ABEE568A3B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DA4DC71-9809-4A6A-9A83-5ABEE568A3B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC1BEE92-AA65-4151-8ABF-A27E9A4751F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC1BEE92-AA65-4151-8ABF-A27E9A4751F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC1BEE92-AA65-4151-8ABF-A27E9A4751F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC1BEE92-AA65-4151-8ABF-A27E9A4751F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF5384C6-DD92-4B36-BF87-56345F28C79E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF5384C6-DD92-4B36-BF87-56345F28C79E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF5384C6-DD92-4B36-BF87-56345F28C79E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF5384C6-DD92-4B36-BF87-56345F28C79E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9DC0268-7315-480B-A089-DA34E713F2E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9DC0268-7315-480B-A089-DA34E713F2E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9DC0268-7315-480B-A089-DA34E713F2E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9DC0268-7315-480B-A089-DA34E713F2E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9FF3827-7758-430E-8FA9-AF6E1A07F564}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9FF3827-7758-430E-8FA9-AF6E1A07F564}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9FF3827-7758-430E-8FA9-AF6E1A07F564}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9FF3827-7758-430E-8FA9-AF6E1A07F564}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23A5CDBF-7F3E-4CD3-93AE-FEB6B3ADB93A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23A5CDBF-7F3E-4CD3-93AE-FEB6B3ADB93A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23A5CDBF-7F3E-4CD3-93AE-FEB6B3ADB93A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23A5CDBF-7F3E-4CD3-93AE-FEB6B3ADB93A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
